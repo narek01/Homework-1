@@ -3,10 +3,14 @@
 import argparse
 import sys
 
+#Функция для прямого
 def direct_bwt(str):
     return 0
+
+
 def inverse_bwt(index, str):
     return 0
+
 
 #Получаем аргументы из командной строки и добавляем немножко описания.
 parser = argparse.ArgumentParser(

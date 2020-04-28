@@ -3,11 +3,11 @@
 import argparse
 import sys
 
-#Функция для прямого
+#Функция для прямого преобразования
 def direct_bwt(str):
     return 0
 
-
+#Функция для обратного преобразования
 def inverse_bwt(index, str):
     return 0
 

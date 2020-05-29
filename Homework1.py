@@ -11,7 +11,6 @@ def direct_bwt(str):
 def inverse_bwt(index, str):
     return 0
 
-
 #Получаем аргументы из командной строки и добавляем немножко описания.
 parser = argparse.ArgumentParser(
         prog='Burrows-Wheeler transform',

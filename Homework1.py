@@ -26,7 +26,6 @@ def direct_bwt(string):
 
     # Обратный перевод чисел в симвлы по юникоду
     str_list = [chr(i) for i in s_mat[:, -1].tolist()]
-    # Чтобы можно было и в переменную записать, и на экран сразу вывести
     return (''.join(str_list),
             cp.where(cp.all(s_arr == s_mat, axis=1))[0].item())
 
@@ -45,7 +44,7 @@ def inverse_bwt(string, ind):
     tab_s = cp.vstack((s_arr, sorted_s))
     for i in range(1, len(s_arr)-1):
         # Сортировка, с получением индексов
-        # массива tab_s для ново1 строки, хотя фактически - столбца
+        # массива tab_s для новой строки, хотя фактически - столбца
         # (метод .T меняет оси массива местами)
         j = cp.lexsort(cp.array([tab_s.T[:, i].tolist() for i
                                 in range(i, -1, -1)]))
@@ -57,7 +56,6 @@ def inverse_bwt(string, ind):
 
     # Обратный перевод чисел в симвлы по юникоду
     str_list = [chr(i) for i in tab_s.T[j][ind]]
-    # Чтобы можно было и в переменную записать, и на экран сразу вывести
     return ''.join(str_list)
 
 # Получаем аргументы из командной строки и добавляем немножко описания.
